@@ -1,0 +1,28 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Maki325 <no-reply@maki325.me>
+Date: Thu, 23 Feb 2023 00:58:54 +0100
+Subject: [PATCH] Changed to include ocelot-api
+
+
+diff --git a/build.gradle.kts b/build.gradle.kts
+index f25c0557cf984b97e0ab361f579eccbf46f82170..5355f4f61e829285310b224b92a1af9ca46bc908 100644
+--- a/build.gradle.kts
++++ b/build.gradle.kts
+@@ -7,7 +7,7 @@ plugins {
+ }
+ 
+ dependencies {
+-    implementation(project(":purpur-api")) // Purpur
++    implementation(project(":ocelot-api")) // Ocelot
+     // Pufferfish start
+     implementation("io.papermc.paper:paper-mojangapi:1.19.3-R0.1-SNAPSHOT") {
+         exclude("io.papermc.paper", "paper-api")
+@@ -84,7 +84,7 @@ tasks.jar {
+         attributes(
+             "Main-Class" to "org.bukkit.craftbukkit.Main",
+             "Implementation-Title" to "CraftBukkit",
+-            "Implementation-Version" to "git-Purpur-$implementationVersion", // Purpur
++            "Implementation-Version" to "git-Ocelot-$implementationVersion", // Ocelot
+             "Implementation-Vendor" to date, // Paper
+             "Specification-Title" to "Bukkit",
+             "Specification-Version" to project.version,

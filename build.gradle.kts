@@ -57,7 +57,7 @@ dependencies {
 }
 
 paperweight {
-    serverProject.set(project(":purpur-server"))
+    serverProject.set(project(":ocelot-server"))
 
     remapRepo.set(paperMavenPublicUrl)
     decompileRepo.set(paperMavenPublicUrl)
@@ -65,10 +65,10 @@ paperweight {
     usePaperUpstream(providers.gradleProperty("paperCommit")) {
         withPaperPatcher {
             apiPatchDir.set(layout.projectDirectory.dir("patches/api"))
-            apiOutputDir.set(layout.projectDirectory.dir("Purpur-API"))
+            apiOutputDir.set(layout.projectDirectory.dir("Ocelot-API"))
 
             serverPatchDir.set(layout.projectDirectory.dir("patches/server"))
-            serverOutputDir.set(layout.projectDirectory.dir("Purpur-Server"))
+            serverOutputDir.set(layout.projectDirectory.dir("Ocelot-Server"))
         }
     }
 }
@@ -89,7 +89,7 @@ allprojects {
     publishing {
         repositories {
             maven("https://repo.purpurmc.org/snapshots") {
-                name = "purpur"
+                name = "ocelot"
                 credentials(PasswordCredentials::class)
             }
         }
